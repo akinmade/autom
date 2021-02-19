@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Link to css file -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*
+            div.container>div.row>div.col-md-3{
+                border-left: 2px solid #888;
+                border-right: 2px solid #888;
+                border-bottom: 1px solid #888;
+            }
+            div.container>div.row>div.col-md-4{
+                border-left: 2px solid #888;
+                border-right: 2px solid #888;
+                border-bottom: 1px solid #888;
+            }
+            div.container>div.row>div.col-md-2{
+                border-left: 2px solid #888;
+                border-right: 2px solid #888;
+                border-bottom: 1px solid #888;
+            }
+            div.container>div.row>div.col-md-6{
+                border-left: 2px solid #888;
+                border-right: 2px solid #888;
+                border-bottom: 1px solid #888;
+            }
+            div.container>div.row>div.col-md-12{
+                border-left: 2px solid #888;
+                border-right: 2px solid #888;
+                border-bottom: 1px solid #888;
+            } */
+        marquee>h5>b>i>a{
+            text-decoration: underline;
+            box-shadow: 5x 10px #888;
+            color: #f00;
+        }
+        marquee>h5>b>i>a:hover{
+            text-decoration: none;
+            color: green;
+            background-color: #fff;
+        }
+        nav.navbar.navbar-inverse{
+            background-color: #fff;
+            border-color: #888;
+            box-shadow: 0px 0px 6px 0px #888;
+        }
+        .mid-image{
+            width: 670px;
+            height: 400px;
+            border: 23px solid #000;
+            border-radius: 20px 20px 0px 0px;
+            box-shadow: 0px 2px 5px 1px #888;
+            margin-left: 350px;
+        <!-- background-color: #888; -->
+            color: #fff;
+            padding: 5px;
+            font-family: 'comic sans MS';
+            font-size: 18px;
+        }
+        footer{
+            font-size: 14px;
+        }
+        footer>center>a{
+            text-decoration: none;
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+<!-- start of navbar -->
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="images/robot.png" class="media-object" style="width:40px;margin-top:-13px;box-shadow:0px " /></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+<marquee behavior="alternate" scrollamount="4"><h5><b><i>
+    Welcome to Click Consulting. Click <a href="#">here</a> to stand a chance for a free consulting service today...</i></b></h5></marquee>
+<!-- end of navbar -->
+<!-- container begins here -->
+<div class="container">
+    <div class="row" style="margin-top:205px;">
+        <div class="col-md-2">
+
+            <div class="col-md-8">
+                <div>
+                    <div class="mid-image">
+                        <b><i>
+                            <br><br>
+                            Video provides a powerful way to help you prove your point.
+                            When you click Online Video, you can paste in the embed code
+                            for the video you want to add. You can also type a keyword
+                            to search online for the video that best fits your document...
+                        </i></b>
+                        <footer style="margin-top:170px;margin-left:-15px;font-family:'comic sans MS';">
+                            <center><i> &copy; 2021 All Rights Reserved. </i>| <a href="mailto:info@ccl.com.ng">Send Email</a> | <a href="tel:081-7524-1860">Call for Quote</a> | <a href="contactus.html">Fill Customer Form</a> | <a href="register.html">Staff Login</a></center>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+        <!-- container ends here -->
+        <!-- using the cdn online jquery -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- bootstrap link file offline -->
+        <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
