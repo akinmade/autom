@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Click Consulting - About Us </title>
+    <!-- Link to css file -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         header>div.header>center>a{
             text-decoration: none;
@@ -23,7 +25,7 @@
         }
         marquee>h5>b>i>a{
             text-decoration: underline;
-            box-shadow: 5x 10px #888;
+            box-shadow: initial;
             color: #f00;
         }
         marquee>h5>b>i>a:hover{
@@ -56,26 +58,33 @@
             width: 400px;
             height: 283px;
         }
+        nav.navbar.navbar-inverse{
+            background-color: #fff;
+            border-color: #888;
+            box-shadow: 0px 0px 6px 0px #888;
+        }
     </style>
 </head>
 <body>
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="images/robot.png" class="media-object" style="width:40px;margin-top:-13px;box-shadow:inherit;" /></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a th:href="@{/}">Home</a></li>
+            <li class="active"><a th:href="@{/aboutus}">About Us</a></li>
+            <li><a th:href="@{/products}">Products</a></li>
+            <li><a th:href="@{/services}">Services</a></li>
+            <li><a th:href="@{/events}">Events</a></li>
+            <li><a th:href="@{/contactus}">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
 <marquee behavior="alternate" scrollamount="4"> <h5><b><i>
-    Welcome to Click Consulting. Click <a href="#">here</a> to stand a chance for a free consulting service today...
+    Welcome to Click Consulting. Click <a th:href="@{/}">here</a> to stand a chance for a free consulting service today...
 </i></b></h5>
 </marquee>
-<!-- <hr/> -->
-<header>
-    <div class="header">
-        <center style="font-family:'comic sans MS';">
-            <a href="index.html" title="Home"> Home </a> |
-            <a href="aboutus.html" title="About Us" class="active"> About Us </a> |
-            <a href="products.html" title="Products"> Products </a> |
-            <a href="services.html" title="Services"> Services </a> |
-            <a href="events.html" title="Seminar/Conferences"> Events </a> |
-            <a href="contactus.html" title="Contact Us"> Contact Us </a>
-        </center>
-    </div>
-</header>
 <div> <!-- Beginning of parent div -->
     <h1><b><i>About Click</i></b></h1>
     <!-- <hr/> -->
@@ -87,7 +96,7 @@
     </p>
     <div>
         <div class="s1">
-            <img src="images/events/monitor.jpg" class="image-resize" />
+            <img src="images/monitor.jpg" class="image-resize" />
             <p style="font-family:'comic sans MS';">
             <h2 align="center"> Services We Offer </h2>
             <ol type="I" style="font-family:'comic sans MS';">
@@ -99,7 +108,7 @@
             </p>
         </div>
         <div class="s1" style="float:right;position: absolute; top: 265px; left: 450px;">
-            <img src="images/events/image-editing.jpg" class="image-resize" />
+            <img src="images/image-editing.jpg" class="image-resize" />
             <p style="font-family:'comic sans MS';">
             <h2 align="center"> Products We Sell</h2>
             <ul type="circle" style="font-family:'comic sans MS';">
@@ -111,7 +120,7 @@
             </p>
         </div>
         <div class="s1" style="float:right; position: absolute; top: 265px; right: 200px;">
-            <img src="images/events/flat.png" class="image-resize" />
+            <img src="images/flat.png" class="image-resize" />
             <p style="font-family:'comic sans MS';">
             <h2 align="center"> Solutions We Provide</h2>
             <ul type="circle" style="font-family:'comic sans MS';">

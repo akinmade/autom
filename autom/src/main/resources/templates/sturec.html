@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Click Consulting - Login </title>
+    <style>
+        header>div.header>center>a{
+            text-decoration: none;
+            background-color: #9999;
+            color: #fff;
+        }
+        header>div.header>center>a:hover{
+            background-color: #fff;
+            color: #999;
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+        a:hover{
+            color: #fff;
+            background-color: #999;
+        }
+        marquee>h5>b>i>a{
+            text-decoration: underline;
+            color: #f00;
+        }
+        marquee>h5>b>i>a:hover{
+            text-decoration: none;
+            color: green;
+            background-color: #fff;
+        }
+        header>div.header>center>a.active{
+            text-decoration: none;
+            color: gray;
+            background-color: #fff;
+        }
+        header{
+            padding: 5px;
+            border-bottom: 1px solid gray;
+        <!-- border-radius: 0px 5px 0px 5px; -->
+        }
+        .s1{
+            border: 1px solid #888;
+            border-radius: 6px;
+            width: 400px;
+            height: 400px;
+        <!-- color: #fff; -->
+        <!-- background-color: #999; -->
+            padding: 5px;
+            margin: 45px auto auto auto;
+            opacity: .9;
+            box-shadow: 5px 10px #888888;
+            background-color: #fff;
+            font-family:'comic sans MS';
+        }
+        .placeholder{
+            text-align: center;
+        }
+        .b{
+            font-family:'comic sans MS';
+        }
+        .button1 {background-color: #4CAF50; box-shadow: 2px 5px #888888;} /* Green */
+        .button2 {background-color: #008CBA; box-shadow: 2px 5px #888888; font-size: 20px; margin-left: 12%; margin-top: 5px; width:300px;} /* Blue */
+        .button3 {background-color: #f44336; box-shadow: 2px 5px #888888;} /* Red */
+        .button4 {background-color: #e7e7e7; color: black;box-shadow: 2px 5px #888888;} /* Gray */
+        .button5 {background-color: #555555; box-shadow: 2px 5px #888888;} /* Black */
+        input[type='text'], input[type='password'], input[type='date'], select{
+            margin-left: 20%;
+            margin-top: 15px;
+            display: block;
+            border: 1px solid #888;
+            border-radius: 3px;
+            width: 80%;
+        }
+        label{
+            margin-left: 50%;
+        }
+    </style>
+</head>
+<body>
+<!-- <h1><b><i>Click Consulting</i></b></h1> -->
+<marquee behavior="alternate" scrollamount="4"> <h5><b><i>
+    Welcome to Click Consulting. Click <a th:href="@{#}">here</a> to stand a chance for a free consulting service today...
+</i></b></h5>
+</marquee>
+<!-- <hr/> -->
+<header>
+    <div class="header">
+        <center style="font-family:'comic sans MS';">
+            <a th:href="@{/}" title="Home"> Home </a> |
+            <a th:href="@{/aboutus}" title="About Us"> About Us </a> |
+            <a th:href="@{/products}" title="Products"> Products </a> |
+            <a th:href="@{/services}" title="Services"> Services </a> |
+            <a th:href="@{/events}" title="Seminar/Conferences"> Events </a> |
+            <a th:href="@{/contactus}" title="Contact Us" class="active"> Contact Us </a>
+        </center>
+    </div>
+</header>
+<div class="s1"> <!-- Beginning of parent2 div -->
+    <form>
+        <table width="auto" cellspacing="4" cellpadding="5">
+            <tr>
+                <td><label>User Name </label><input th:type="text" th:placeholder="User Name" th:id="username" /></td>
+            </tr>
+            <tr>
+                <td><label>Password </label><input th:type="password" th:placeholder="Password" th:id="password" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <select>
+                        <option th:value="0">Select Department</option>
+                        <option th:value="1">Administration</option>
+                        <option th:value="2">Audit/Compliance</option>
+                        <option th:value="3">Information Technology</option>
+                        <option th:value="4">Marketing</option>
+                        <option th:value="5">Research</option>
+                        <option th:value="6">Sales</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select>
+                        <option th:value="0">Select Work Nature</option>
+                        <option th:value="1">Contract</option>
+                        <option th:value="2">Normal</option>
+                        <option th:value="3">Work on Leave</option>
+                        <option th:value="4">On Leave</option>
+                        <option th:value="5">Project Team</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input th:type="submit" class="button2" th:value="login" />
+                </td>
+            </tr>
+        </table>
+        <p style="text-align: center;">Forgot your password <a th:href="@{#}">click here</a></p>
+    </form>
+</div> <!-- End of parent2 div -->
+<div> <!-- Beginning of footer div -->
+    <footer style="margin-top:300px;margin-left:300px;font-family:'comic sans MS';">
+        <center><i> &copy; 2021 All Rights Reserved. </i>| <a href="mailto:info@ccl.com.ng">Send Email</a> | <a href="tel:081-7524-1860">Call for Quote</a> | <a href="contactus.html">Fill Customer Form</a> | <a th:href="@{/register}">Staff Login<a/></center>
+    </footer>
+</div> <!-- End of footer div -->
+
+<script>
+    var username = prompt('Enter Username:','');
+    var password = prompt('Enter Password:','');
+    if(username != "" && password != ""){
+        if(username == "admin" && password == "admin123"){
+            <!-- alert('Please wait while we log you in...'); -->
+            location.href="index.html";
+        }else{
+            alert('Login Failed');
+            <!-- location.href="register.html"; -->
+        }
+    }else if(username == "" && password == ""){
+        alert('Login failed!');
+        <!-- location.href="register.html"; -->
+    }else if(username != "" && password == ""){
+        alert('Login Failed!');
+        <!-- location.href="register.html"; -->
+    }else if(username == "" && password != ""){
+        alert('Login Failed!');
+        <!-- location.href="register.html"; -->
+    }
+</script>
+</body>
+</html>
